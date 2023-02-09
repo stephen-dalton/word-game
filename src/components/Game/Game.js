@@ -3,7 +3,8 @@ import GuessResults from "../GuessResults";
 import GuessInput from "../GuessInput";
 import { sample } from "../../utils";
 import { WORDS } from "../../data";
-import Banner from "../Banner/Banner";
+import LostBanner from "../LostBanner";
+import WonBanner from "../WonBanner";
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 
 // Pick a random word on every pageload.
@@ -37,11 +38,8 @@ function Game() {
         handleGuessSubmission={handleGuessSubmission}
         gameStatus={gameStatus}
       />
-      <Banner
-        gameStatus={gameStatus}
-        numOfGuesses={guesses.length}
-        answer={answer}
-      />
+      {gameStatus === "won" && <WonBanner numOfGuess={guesses.length} />}
+      {gameStatus === "lost" && <LostBanner answer={answer} />}
     </>
   );
 }
