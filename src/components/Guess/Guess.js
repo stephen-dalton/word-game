@@ -19,14 +19,12 @@ function Cell({ letter, status }) {
   return <span className={className}>{letter}</span>;
 }
 
-function Guess({ value, answer }) {
-  const result = checkGuess(value, answer);
-
+function Guess({ value }) {
   const displayGuess = range(0, 5).map((index) => (
     <Cell
       key={index}
-      letter={result ? result[index].letter : undefined}
-      status={result ? result[index].status : undefined}
+      letter={value ? value[index].letter : undefined}
+      status={value ? value[index].status : undefined}
     />
   ));
   return <p className="guess">{displayGuess}</p>;

@@ -1,16 +1,19 @@
 import React from "react";
+import KeyboardRow from "../KeyboardRow";
 
-import { ALPHABET } from "../../constants";
-import Key from "../Key";
-
-function Keyboard() {
-  const keys = ALPHABET.split("").map((letter) => (
-    <Key key={letter} character={letter} />
-  ));
+function Keyboard({ validatedGuesses, answer }) {
+  const rows = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
 
   return (
-    <div className="keyboard-wrapper">
-      <p className="keyboard">{keys}</p>
+    <div className="keyboard">
+      {rows.map((row, idx) => (
+        <KeyboardRow
+          key={idx}
+          row={row}
+          answer={answer}
+          validatedGuesses={validatedGuesses}
+        />
+      ))}
     </div>
   );
 }
