@@ -1,5 +1,17 @@
 # Word Game
 
+
+Wordle Clone w/ Accessability. This project was created alongside Josh Comeau's Joy of React Course.
+
+This project includes all 6 project exericses, as seen below. Including both stretch goals:
+1. Keyboard Guess Tracking Implementation ✓
+2. Game Reset, so a user does not need to refresh the browser to restart the game - Pending
+
+More details coming shortly
+
+
+<details>
+<summary>Created as part of Joy of React Course. See More →</summary>
 ## Joy of React, Project I
 
 In this project, we'll recreate a popular online word game, Wordle:
@@ -166,7 +178,7 @@ Inside `/src/game-helpers.js`, you'll find a helper function, `checkGuess`. As p
 For example:
 
 ```js
-checkGuess('WHALE', 'LEARN');
+checkGuess("WHALE", "LEARN");
 /*
   Returns:
 
@@ -224,10 +236,7 @@ The user wins the game when their guessed word is identical to the `answer`. The
 
 ```html
 <div class="happy banner">
-  <p>
-    <strong>Congratulations!</strong> Got it in
-    <strong>3 guesses</strong>.
-  </p>
+  <p><strong>Congratulations!</strong> Got it in <strong>3 guesses</strong>.</p>
 </div>
 ```
 
@@ -297,3 +306,4 @@ _HINT:_ This will require moving the `answer` into state. You'll want to do the 
 
 - A "Restart Game" button is shown at the end of the game. You can put this button in the `GameOverBanner`, or wherever else you'd like!
 - Clicking the button should select a new correct word and reset all other state.
+</details>
